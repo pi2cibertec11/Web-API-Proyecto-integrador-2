@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="proyectoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IDCliente" />
+    </Key>
+    <Property Name="IDCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreCliente" Type="varchar" MaxLength="30" />
+    <Property Name="ApellidosCliente" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="TelefonoCliente" Type="int" />
+    <Property Name="Password" Type="varchar" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="platos">
+    <Key>
+      <PropertyRef Name="platoId" />
+    </Key>
+    <Property Name="platoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="platoNombre" Type="varchar" MaxLength="30" />
+    <Property Name="platoCodigo" Type="varchar" MaxLength="20" />
+    <Property Name="platodescrip" Type="varchar" MaxLength="80" />
+    <Property Name="platoprice" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="starRating" Type="numeric" Precision="18" Scale="1" />
+    <Property Name="imageUrl" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityContainer Name="proyectoModelStoreContainer">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="platos" EntityType="Self.platos" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

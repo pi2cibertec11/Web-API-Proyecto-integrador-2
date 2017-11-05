@@ -1,0 +1,7 @@
+D:\AUTODIDACTA\angular\Servicio06-10\pi2.Datos\bin\Debug\pi2.Datos.dll
+D:\AUTODIDACTA\angular\Servicio06-10\pi2.Datos\bin\Debug\pi2.Datos.pdb
+D:\AUTODIDACTA\angular\Servicio06-10\pi2.Datos\bin\Debug\pi2.Models.dll
+D:\AUTODIDACTA\angular\Servicio06-10\pi2.Datos\bin\Debug\pi2.Models.pdb
+D:\AUTODIDACTA\angular\Servicio06-10\pi2.Datos\obj\Debug\pi2.Datos.csprojResolveAssemblyReference.cache
+D:\AUTODIDACTA\angular\Servicio06-10\pi2.Datos\obj\Debug\pi2.Datos.dll
+D:\AUTODIDACTA\angular\Servicio06-10\pi2.Datos\obj\Debug\pi2.Datos.pdb

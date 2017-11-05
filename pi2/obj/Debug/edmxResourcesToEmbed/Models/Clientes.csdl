@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="proyectoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IDCliente" />
+    </Key>
+    <Property Name="IDCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidosCliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TelefonoCliente" Type="Int32" />
+    <Property Name="Password" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="proyectoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="platos" EntityType="proyectoModel.platos" />
+  </EntityContainer>
+  <EntityType Name="platos">
+    <Key>
+      <PropertyRef Name="platoId" />
+    </Key>
+    <Property Name="platoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="platoNombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="platoCodigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="platodescrip" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="platoprice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="starRating" Type="Decimal" Precision="18" Scale="1" />
+    <Property Name="imageUrl" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="proyectoModelStoreContainer" CdmEntityContainer="proyectoEntities">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="proyectoModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="ApellidosCliente" ColumnName="ApellidosCliente" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="TelefonoCliente" ColumnName="TelefonoCliente" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="platos">
+      <EntityTypeMapping TypeName="proyectoModel.platos">
+        <MappingFragment StoreEntitySet="platos">
+          <ScalarProperty Name="imageUrl" ColumnName="imageUrl" />
+          <ScalarProperty Name="starRating" ColumnName="starRating" />
+          <ScalarProperty Name="platoprice" ColumnName="platoprice" />
+          <ScalarProperty Name="platodescrip" ColumnName="platodescrip" />
+          <ScalarProperty Name="platoCodigo" ColumnName="platoCodigo" />
+          <ScalarProperty Name="platoNombre" ColumnName="platoNombre" />
+          <ScalarProperty Name="platoId" ColumnName="platoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
