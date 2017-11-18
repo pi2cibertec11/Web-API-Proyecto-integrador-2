@@ -117,5 +117,16 @@ namespace pi2.Datos
             conexion.Close();
             return clientes;
         }
+
+        public Boolean actualizarClientes() {
+
+            return false;
+        }
+        
+        public Boolean eliminarClientes()
+        {
+
+            return false;
+        }
     }
 }
