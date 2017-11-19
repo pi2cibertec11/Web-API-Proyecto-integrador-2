@@ -16,9 +16,9 @@ namespace pi2.Negocios
         {
             clienteDatos = new ClientesDatos();
         }
-        public Clientes Login(string Email,string Password)
+        public Clientes Login(string Email, string Password)
         {
-            return clienteDatos.Login(Email,Password);
+            return clienteDatos.Login(Email, Password);
         }
 
         public List<Clientes> ListarCliente()
@@ -29,5 +29,13 @@ namespace pi2.Negocios
         {
             return clienteDatos.regclientes(cli);
         }
+        public Boolean actualizarClientes(Clientes cli)
+        {
+            return clienteDatos.actualizarClientes(cli);
+        }
+        public Boolean eliminar(Clientes cli) {
+            return clienteDatos.eliminarClientes(cli);
+        }
+
     }
 }

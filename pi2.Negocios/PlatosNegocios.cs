@@ -24,5 +24,14 @@ namespace pi2.Negocios
         {
             return platosDatos.regplatos(pla);
         }
+        public Boolean actualizar(Platos pla)
+        {
+            return platosDatos.actualizarPlatos(pla);
+        }
+        public Boolean eliminar(Platos pla)
+        {
+            return platosDatos.eliminarPlatos(pla);
+        }
+
     }
 }
