@@ -124,8 +124,9 @@ namespace pi2.Datos
             try
             {
                 conexion.Open();
+
                 string query = " update Clientes2 set NombreCliente=@name,ApellidosCliente=@ape,Dni=@dni,Direccion=@dir" +
-                    "TelefonoCliente=@telf,Email=@email,Password=@pass,esAdmin=@esAdmin ";
+                    "TelefonoCliente=@telf,Email=@email,Password=@pass";
 
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.Parameters.AddWithValue("@name", cli.NombreCliente);
@@ -135,8 +136,9 @@ namespace pi2.Datos
                 comando.Parameters.AddWithValue("@telf", cli.TelefonoCliente);
                 comando.Parameters.AddWithValue("@email", cli.Email);
                 comando.Parameters.AddWithValue("@pass", cli.Password);
-                comando.Parameters.AddWithValue("@esAdmin", cli.esAdmin);
                 SqlDataReader lector = comando.ExecuteReader();
+
+
 
                 conexion.Close();
                 dato = true;
