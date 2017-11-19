@@ -118,9 +118,35 @@ namespace pi2.Datos
             return clientes;
         }
 
-        public Boolean actualizarClientes() {
+        public Boolean actualizarClientes(Clientes cli) {
 
-            return false;
+            Boolean dato = false;
+            try
+            {
+                conexion.Open();
+                string query = " update Clientes2 set NombreCliente=@name,ApellidosCliente=@ape,Dni=@dni,Direccion=@dir" +
+                    "TelefonoCliente=@telf,Email=@email,Password=@pass,esAdmin=@esAdmin ";
+
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.Parameters.AddWithValue("@name", cli.NombreCliente);
+                comando.Parameters.AddWithValue("@ape", cli.ApellidosCliente);
+                comando.Parameters.AddWithValue("@dni", cli.Dni);
+                comando.Parameters.AddWithValue("@dir", cli.Direccion);
+                comando.Parameters.AddWithValue("@telf", cli.TelefonoCliente);
+                comando.Parameters.AddWithValue("@email", cli.Email);
+                comando.Parameters.AddWithValue("@pass", cli.Password);
+                comando.Parameters.AddWithValue("@esAdmin", cli.esAdmin);
+                SqlDataReader lector = comando.ExecuteReader();
+
+                conexion.Close();
+                dato = true;
+            }
+            catch
+            {
+                dato = false;
+
+            }
+            return dato;
         }
         
         public Boolean eliminarClientes()
