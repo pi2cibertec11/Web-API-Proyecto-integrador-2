@@ -103,10 +103,27 @@ namespace pi2.Datos
         }
 
 
-        public Boolean eliminarPlatos()
+        public Boolean eliminarPlatos(Platos pla)
         {
+            Boolean dato = false;
+            try
+            {
+                conexion.Open();
 
-            return false;
+                string query = " delete from platos  where platoId =@idpla";
+
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.Parameters.AddWithValue("@idpla", pla.platoId);
+                SqlDataReader lector = comando.ExecuteReader();
+
+                conexion.Close();
+                dato = true;
+            }
+            catch
+            {
+                dato = false;
+            }
+            return dato;
         }
     }
 
