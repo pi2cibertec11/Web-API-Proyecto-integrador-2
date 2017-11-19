@@ -151,10 +151,28 @@ namespace pi2.Datos
             return dato;
         }
         
-        public Boolean eliminarClientes()
+        public Boolean eliminarClientes(Clientes cli)
         {
+            Boolean dato = false;
+            try
+            {
+                conexion.Open();
 
-            return false;
+                string query = " delete from Clientes2  where IDCliente =@idcli";
+
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.Parameters.AddWithValue("@idcli", cli.IDCliente);
+                SqlDataReader lector = comando.ExecuteReader();
+
+                conexion.Close();
+                dato = true;
+            }
+            catch
+            {
+                dato = false;
+
+            }
+            return dato;
         }
     }
 }
