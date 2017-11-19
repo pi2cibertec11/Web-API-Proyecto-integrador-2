@@ -13,6 +13,8 @@ namespace pi2.Datos
 {
     public class ClientesDatos
     {
+
+        // CONEXION A BD
         string cadenaConexion = @"server=USER\SQL;database=proyecto;user id=sa;password=sql;";
         SqlConnection conexion;
 
@@ -114,6 +116,63 @@ namespace pi2.Datos
 
             conexion.Close();
             return clientes;
+        }
+
+        public Boolean actualizarClientes(Clientes cli) {
+
+            Boolean dato = false;
+            try
+            {
+                conexion.Open();
+
+                string query = " update Clientes2 set NombreCliente=@name,ApellidosCliente=@ape,Dni=@dni,Direccion=@dir" +
+                    "TelefonoCliente=@telf,Email=@email,Password=@pass";
+
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.Parameters.AddWithValue("@name", cli.NombreCliente);
+                comando.Parameters.AddWithValue("@ape", cli.ApellidosCliente);
+                comando.Parameters.AddWithValue("@dni", cli.Dni);
+                comando.Parameters.AddWithValue("@dir", cli.Direccion);
+                comando.Parameters.AddWithValue("@telf", cli.TelefonoCliente);
+                comando.Parameters.AddWithValue("@email", cli.Email);
+                comando.Parameters.AddWithValue("@pass", cli.Password);
+                SqlDataReader lector = comando.ExecuteReader();
+
+
+
+                conexion.Close();
+                dato = true;
+            }
+            catch
+            {
+                dato = false;
+
+            }
+            return dato;
+        }
+        
+        public Boolean eliminarClientes(Clientes cli)
+        {
+            Boolean dato = false;
+            try
+            {
+                conexion.Open();
+
+                string query = " delete from Clientes2  where IDCliente =@idcli";
+
+                SqlCommand comando = new SqlCommand(query, conexion);
+                comando.Parameters.AddWithValue("@idcli", cli.IDCliente);
+                SqlDataReader lector = comando.ExecuteReader();
+
+                conexion.Close();
+                dato = true;
+            }
+            catch
+            {
+                dato = false;
+
+            }
+            return dato;
         }
     }
 }

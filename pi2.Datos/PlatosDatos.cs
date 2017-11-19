@@ -75,6 +75,18 @@ namespace pi2.Datos
             return true;
         }
 
+        public Boolean actualizarPlatos()
+        {
+
+            return false;
+        }
+
+
+        public Boolean eliminarPlatos()
+        {
+
+            return false;
+        }
     }
 
 }
