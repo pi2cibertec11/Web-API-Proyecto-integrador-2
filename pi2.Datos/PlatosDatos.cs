@@ -10,7 +10,7 @@ namespace pi2.Datos
 {
    public class PlatosDatos
     {
-        string cadenaConexion = @"server=USER\SQL;database=proyecto;user id=sa;password=sql;";
+        string cadenaConexion = @"server=.\SQL;database=proyecto;user id=sa;password=sql;";
         SqlConnection conexion;
 
         public  PlatosDatos(){
@@ -75,10 +75,31 @@ namespace pi2.Datos
             return true;
         }
 
-        public Boolean actualizarPlatos()
+        public Boolean actualizarPlatos(Platos pla)
         {
+            try
+            {
 
-            return false;
+                conexion.Open();
+                string query = " update platos set  platoNombre = @nom,platodescrip = @des,platoprice = @price"+
+                    ",imageUrl = @img) ";
+
+                SqlCommand comando = new SqlCommand(query, conexion);
+                
+                comando.Parameters.AddWithValue("@nom", pla.platoNombre);
+                comando.Parameters.AddWithValue("@des", pla.platodescrip);
+                comando.Parameters.AddWithValue("@price", pla.platoprice);
+                comando.Parameters.AddWithValue("@img", pla.imageUrl);
+
+                SqlDataReader lector = comando.ExecuteReader();
+
+                conexion.Close();
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
         }
 
 
