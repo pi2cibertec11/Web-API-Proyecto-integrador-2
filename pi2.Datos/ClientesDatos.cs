@@ -14,7 +14,7 @@ namespace pi2.Datos
     public class ClientesDatos
     {
 
-        // CONEXION A BD
+        // CONEXION A BD +2
         string cadenaConexion = @"server=USER\SQL;database=proyecto;user id=sa;password=sql;";
         SqlConnection conexion;
 
