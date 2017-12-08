@@ -42,6 +42,7 @@ namespace pi2.Datos
                     cli.IDCliente = int.Parse(lector["IDCLiente"].ToString());
                     cli.NombreCliente = lector["NombreCliente"].ToString();
                     cli.ApellidosCliente = lector["ApellidosCliente"].ToString();
+                    cli.Dni = int.Parse(lector["Dni"].ToString());
                     cli.Email = lector["Email"].ToString();
                     cli.TelefonoCliente = int.Parse(lector["TelefonoCliente"].ToString());
 
@@ -125,8 +126,8 @@ namespace pi2.Datos
             {
                 conexion.Open();
 
-                string query = " update Clientes2 set NombreCliente=@name,ApellidosCliente=@ape,Dni=@dni,Direccion=@dir" +
-                    "TelefonoCliente=@telf,Email=@email,Password=@pass";
+                string query = " update Clientes2 set NombreCliente=@name,ApellidosCliente=@ape,Dni=@dni,Direccion=@dir," +
+                    "TelefonoCliente=@telf,Password=@pass where Email=@email";
 
                 SqlCommand comando = new SqlCommand(query, conexion);
                 comando.Parameters.AddWithValue("@name", cli.NombreCliente);
@@ -134,14 +135,24 @@ namespace pi2.Datos
                 comando.Parameters.AddWithValue("@dni", cli.Dni);
                 comando.Parameters.AddWithValue("@dir", cli.Direccion);
                 comando.Parameters.AddWithValue("@telf", cli.TelefonoCliente);
-                comando.Parameters.AddWithValue("@email", cli.Email);
                 comando.Parameters.AddWithValue("@pass", cli.Password);
-                SqlDataReader lector = comando.ExecuteReader();
+                comando.Parameters.AddWithValue("@email", cli.Email);
+
+                comando.ExecuteNonQuery();
+               // comando.ExecuteNonQuery();
+               // SqlDataReader lector = comando.ExecuteReader();
 
 
 
+                
+                if (comando.ExecuteNonQuery().Equals(0)) {
+                    dato = false;
+                }
+                else
+                {
+                    dato = true;
+                }
                 conexion.Close();
-                dato = true;
             }
             catch
             {

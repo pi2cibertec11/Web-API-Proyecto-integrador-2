@@ -29,5 +29,13 @@ namespace pi2.Negocios
         {
             return clienteDatos.regclientes(cli);
         }
+        public Boolean ActualizarClientes(Clientes cli)
+        {
+            Boolean act = clienteDatos.actualizarClientes(cli);
+            if (act==true){
+                return true;
+            }
+            return false;
+        }
     }
 }

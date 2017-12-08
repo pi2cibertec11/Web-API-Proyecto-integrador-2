@@ -7,3 +7,12 @@ D:\AUTODIDACTA\angular\Servicio06-10\pi2.Negocios\bin\Debug\pi2.Models.pdb
 D:\AUTODIDACTA\angular\Servicio06-10\pi2.Negocios\obj\Debug\pi2.Negocios.csprojResolveAssemblyReference.cache
 D:\AUTODIDACTA\angular\Servicio06-10\pi2.Negocios\obj\Debug\pi2.Negocios.dll
 D:\AUTODIDACTA\angular\Servicio06-10\pi2.Negocios\obj\Debug\pi2.Negocios.pdb
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Negocios\bin\Debug\pi2.Negocios.dll
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Negocios\bin\Debug\pi2.Negocios.pdb
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Negocios\bin\Debug\pi2.Datos.dll
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Negocios\bin\Debug\pi2.Models.dll
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Negocios\bin\Debug\pi2.Datos.pdb
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Negocios\bin\Debug\pi2.Models.pdb
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Negocios\obj\Debug\pi2.Negocios.csprojResolveAssemblyReference.cache
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Negocios\obj\Debug\pi2.Negocios.dll
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Negocios\obj\Debug\pi2.Negocios.pdb

@@ -3,3 +3,8 @@ D:\AUTODIDACTA\angular\Servicio06-10\pi2.Models\bin\Debug\pi2.Models.pdb
 D:\AUTODIDACTA\angular\Servicio06-10\pi2.Models\obj\Debug\pi2.Models.dll
 D:\AUTODIDACTA\angular\Servicio06-10\pi2.Models\obj\Debug\pi2.Models.pdb
 D:\AUTODIDACTA\angular\Servicio06-10\pi2.Models\obj\Debug\pi2.Models.csprojResolveAssemblyReference.cache
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Models\bin\Debug\pi2.Models.dll
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Models\bin\Debug\pi2.Models.pdb
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Models\obj\Debug\pi2.Models.csprojResolveAssemblyReference.cache
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Models\obj\Debug\pi2.Models.dll
+C:\Users\pc\Videos\servicio\Web-API-Proyecto-integrador-2\pi2.Models\obj\Debug\pi2.Models.pdb

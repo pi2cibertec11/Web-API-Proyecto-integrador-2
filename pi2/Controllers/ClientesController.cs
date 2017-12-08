@@ -35,5 +35,15 @@ namespace pi2.Controllers
         {
             return clientesNegocios.regclientes(cli);
         }
+        [HttpPut]
+        public Boolean ActualizarClientes(Clientes cli)
+        {
+            Boolean per= clientesNegocios.ActualizarClientes(cli);
+            if (per == true)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
